@@ -1,18 +1,24 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    './pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './components/**/*.{js,ts,jsx,tsx,mdx}',
-    './app/**/*.{js,ts,jsx,tsx,mdx}',
-  ],
-  theme: {
-    extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-      },
-    },
-  },
-  plugins: [],
+	content: [
+		'./pages/**/*.{js,ts,jsx,tsx,mdx}',
+		'./components/**/*.{js,ts,jsx,tsx,mdx}',
+		'./app/**/*.{js,ts,jsx,tsx,mdx}',
+	],
+	theme: {
+		extend: {
+			colors: {
+				desaturatedRed: 'hsl(0, 36%, 70%)',
+				softRed: 'hsl(0, 93%, 68%)',
+				darkGrayishRed: 'hsl(0, 6%, 24%)',
+			},
+			backgroundImage: {
+				desktop: 'url("/images/bg-pattern-desktop.svg")',
+				'gradient-135': 'linear-gradient(135deg, var(--tw-gradient-stops))',
+				mobile: 'linear-gradient(150.03deg, #FFFFFF 0%, #FFF4F4 84.51%)',
+				btn: 'linear-gradient(135deg, #F8BFBF 0%, #EE8B8B 100%)',
+			},
+		},
+	},
+	plugins: [require('@tailwindcss/forms')],
 }
