@@ -15,7 +15,7 @@ export default function Home() {
 				/>
 			</div>
 
-			<section className='flex flex-col gap-y-4 px-8 pb-24 pt-16 text-center md:col-span-5 md:col-start-1 md:row-span-4 md:space-y-8 md:pl-40 md:text-left'>
+			<section className='flex flex-col gap-y-4 px-8 pb-24 pt-16 text-center md:col-span-5 md:col-start-1 md:row-span-4 md:gap-y-8 md:pl-40 md:text-left'>
 				<h1 className='text-5xl font-light uppercase leading-tight tracking-widest text-desaturatedRed md:text-7xl '>
 					WE&apos;RE
 					<span className='block font-semibold text-darkGrayishRed'>
