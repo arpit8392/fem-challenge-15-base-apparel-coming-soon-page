@@ -1,8 +1,3 @@
-// TODO Do not use % width but use max and min width instead
-// TODO Every field should always have a label
-// TODO Review the Header tags
-// TODO Check if there are any list items which can be added as li?
-
 import InputForm from '@/components/InputForm'
 
 export default function Home() {
