@@ -6,6 +6,9 @@ module.exports = {
 		'./app/**/*.{js,ts,jsx,tsx,mdx}',
 	],
 	theme: {
+		letterSpacing: {
+			widest: '.28em',
+		},
 		extend: {
 			colors: {
 				desaturatedRed: 'hsl(0, 36%, 70%)',
@@ -14,7 +17,6 @@ module.exports = {
 			},
 			backgroundImage: {
 				desktop: 'url("/images/bg-pattern-desktop.svg")',
-				'gradient-135': 'linear-gradient(135deg, var(--tw-gradient-stops))',
 				mobile: 'linear-gradient(150.03deg, #FFFFFF 0%, #FFF4F4 84.51%)',
 				btn: 'linear-gradient(135deg, #F8BFBF 0%, #EE8B8B 100%)',
 			},

@@ -19,10 +19,7 @@ export default function RootLayout({
 	return (
 		<html lang='en'>
 			<body
-				className={`${josefin_sans.className} min-h-screen overflow-y-auto bg-mobile md:bg-desktop md:bg-cover md:bg-repeat-x `}>
-				<header className='p-8 md:px-40'>
-					<img src='/images/logo.svg' alt='' />
-				</header>
+				className={`${josefin_sans.className} bg-mobile md:bg-desktop md:bg-cover `}>
 				{children}
 			</body>
 		</html>

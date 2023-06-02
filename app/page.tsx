@@ -1,22 +1,27 @@
+// TODO Do not use % width but use max and min width instead
+// TODO Every field should always have a label
+// TODO Review the Header tags
+// TODO Check if there are any list items which can be added as li?
+
 import InputForm from '@/components/InputForm'
 
 export default function Home() {
 	return (
-		<main className='grid grid-cols-1 gap-16 md:grid-cols-5'>
-			<figure className='md:order-1 md:col-span-2'>
+		<main className='relative grid grid-cols-1 md:grid-cols-5 md:grid-rows-5'>
+			<header className='px-8 py-8 md:col-span-3 md:row-span-1 md:pl-40 md:pt-20'>
+				<img src='/images/logo.svg' alt='Brand Logo' />
+			</header>
+
+			<div className='col-span-full block md:hidden'>
 				<img
 					src='/images/hero-mobile.jpg'
-					alt=''
-					className='block w-full md:hidden'
+					alt='Fashion Store Owner Image'
+					className='w-full '
 				/>
-				<img
-					src='/images/hero-desktop.jpg'
-					alt=''
-					className='hidden object-contain md:block'
-				/>
-			</figure>
-			<section className='flex flex-col space-y-4 px-8 text-center md:col-span-3 md:place-content-center md:items-start md:space-y-8 md:px-40 md:text-left pb-24'>
-				<h1 className='text-[40px]/[42px] font-light uppercase tracking-[11px] text-desaturatedRed md:text-[64px]/[71px] md:tracking-[18px] '>
+			</div>
+
+			<section className='flex flex-col gap-y-4 px-8 pb-24 pt-16 text-center md:col-span-5 md:col-start-1 md:row-span-4 md:space-y-8 md:pl-40 md:text-left'>
+				<h1 className='text-5xl font-light uppercase leading-tight tracking-widest text-desaturatedRed md:text-7xl '>
 					WE'RE
 					<span className='block font-semibold text-darkGrayishRed'>
 						COMING <span className='block'>SOON</span>
@@ -29,6 +34,14 @@ export default function Home() {
 				</p>
 				<InputForm />
 			</section>
+
+			<div className='hidden md:col-span-2 md:col-start-6 md:row-span-full md:row-start-1 md:block'>
+				<img
+					src='/images/hero-desktop.jpg'
+					alt='Fashion Store Owner Image'
+					className='h-screen w-full'
+				/>
+			</div>
 		</main>
 	)
 }

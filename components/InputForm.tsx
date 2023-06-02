@@ -27,32 +27,39 @@ const InputForm = () => {
 	const onSubmit = (data: FormData) => console.log(data)
 
 	return (
-		<form
-			onSubmit={handleSubmit(onSubmit)}
-			noValidate
-			className='mx-auto min-w-full'>
-			<div className='relative flex flex-row items-center rounded-md shadow-sm '>
+		<form onSubmit={handleSubmit(onSubmit)} noValidate>
+			<div className='relative flex flex-row items-center rounded-md md:max-w-md'>
+				<label htmlFor='email' className='sr-only'>
+					Email
+				</label>
 				<input
 					type='email'
+					autoComplete='off'
 					{...register('email')}
 					placeholder='Email Address'
-					className={`flex-1 rounded-full border  border-desaturatedRed bg-inherit px-6 py-3 text-sm/7 text-darkGrayishRed placeholder:font-normal placeholder:text-desaturatedRed focus:border-none focus:outline-none focus:ring-1 focus:ring-desaturatedRed ${
-						errors.email?.message && 'focus:ring-2 focus:ring-softRed'
+					className={`flex-1 rounded-full border border-desaturatedRed bg-inherit px-6 py-3 text-sm/7 text-darkGrayishRed placeholder:font-normal placeholder:text-desaturatedRed focus:border-none focus:outline-none focus:ring-2  active:bg-inherit  ${
+						errors.email?.message
+							? 'focus:ring-softRed'
+							: 'focus:ring-desaturatedRed'
 					}`}
 				/>
 
 				{errors.email?.message && (
-					<div className='absolute right-28 z-10'>
-						<img src='/images/icon-error.svg' alt='' />
+					<div className='absolute right-16 z-10 md:right-24'>
+						<img
+							src='/images/icon-error.svg'
+							alt='Exclamation Icon in Form Error State'
+						/>
 					</div>
 				)}
 
-				<button className='flex h-14 w-16 -translate-x-1/2 items-center justify-center rounded-full bg-btn'>
-					<img src='/images/icon-arrow.svg' alt='' />
+				<button className='absolute -right-1 flex h-14 w-16 items-center justify-center rounded-full bg-btn md:w-24'>
+					<img src='/images/icon-arrow.svg' alt='Arrow Icon in Button' />
 				</button>
 			</div>
+
 			{errors.email?.message && (
-				<p className='ml-6 mt-2 text-left text-sm text-softRed'>
+				<p className='px-8 py-2 text-left text-sm text-softRed'>
 					{errors.email.message}
 				</p>
 			)}
