@@ -37,7 +37,7 @@ const InputForm = () => {
 					autoComplete='off'
 					{...register('email')}
 					placeholder='Email Address'
-					className={`flex-1 rounded-full border border-desaturatedRed bg-inherit px-6 py-3 text-sm/7 text-darkGrayishRed placeholder:font-normal placeholder:text-desaturatedRed focus:border-none focus:outline-none focus:ring-2  active:bg-inherit  ${
+					className={`flex-1 rounded-full border border-desaturatedRed bg-inherit px-6 py-3 text-sm/7 text-darkGrayishRed placeholder:font-normal placeholder:text-desaturatedRed/50 focus:border-none focus:outline-none focus:ring-2  active:bg-inherit  ${
 						errors.email?.message
 							? 'focus:ring-softRed'
 							: 'focus:ring-desaturatedRed'
