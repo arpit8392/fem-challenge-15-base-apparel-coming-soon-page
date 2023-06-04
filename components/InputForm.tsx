@@ -3,6 +3,7 @@
 import { useForm } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
 import * as yup from 'yup'
+import Image from 'next/image'
 
 const schema = yup
 	.object({
@@ -46,15 +47,22 @@ const InputForm = () => {
 
 				{errors.email?.message && (
 					<div className='absolute right-16 z-10 md:right-24'>
-						<img
-							src='/images/icon-error.svg'
-							alt='Exclamation Icon in Form Error State'
+						<Image
+							src={'/images/icon-error.svg'}
+							alt=''
+							height={24}
+							width={24}
 						/>
 					</div>
 				)}
 
 				<button className='absolute -right-1 flex h-14 w-16 items-center justify-center rounded-full bg-btn md:w-24'>
-					<img src='/images/icon-arrow.svg' alt='Arrow Icon in Button' />
+					<Image
+						src={'/images/icon-arrow.svg'}
+						alt='Submit Button'
+						height={18}
+						width={9}
+					/>
 				</button>
 			</div>
 
