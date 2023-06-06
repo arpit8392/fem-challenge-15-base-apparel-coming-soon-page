@@ -37,6 +37,8 @@ const InputForm = () => {
 					type='email'
 					autoComplete='off'
 					{...register('email')}
+					id='email'
+					aria-invalid={errors.email ? 'true' : 'false'}
 					placeholder='Email Address'
 					className={`flex-1 rounded-full border border-desaturatedRed bg-inherit px-6 py-3 text-sm/7 text-darkGrayishRed placeholder:font-normal placeholder:text-desaturatedRed/50 focus:border-none focus:outline-none focus:ring-2  active:bg-inherit  ${
 						errors.email?.message
@@ -67,7 +69,7 @@ const InputForm = () => {
 			</div>
 
 			{errors.email?.message && (
-				<p className='px-8 py-2 text-left text-sm text-softRed'>
+				<p role='alert' className='px-8 py-2 text-left text-sm text-softRed'>
 					{errors.email.message}
 				</p>
 			)}
